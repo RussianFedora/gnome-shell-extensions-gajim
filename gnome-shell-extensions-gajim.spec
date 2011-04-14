@@ -1,6 +1,6 @@
 Name:           gnome-shell-extensions-gajim
 Version:        3.0.0
-Release:        1.6d56cfgit%{?dist}
+Release:        2.6d56cfgit%{?dist}
 Summary:        GNOME Shell Extension for Gajim IM Client
 Group:          User Interface/Desktops
 License:        GPLv2+ 
@@ -16,7 +16,7 @@ BuildRequires:  intltool
 
 BuildRequires:  glib2-devel
 Requires:       gnome-shell
-Requires:       %{name}-common
+Requires:       gnome-shell-extensions-common
 Requires:       gajim >= 0.15
 BuildArch:      noarch
 
@@ -52,5 +52,8 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale
 
 
 %changelog
+* Thu Apr 14 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 3.0.0-2.6d56cfgit
+- require gnome-shell-extensions-common not gnome-shell-extensions-gajim-common
+
 * Thu Apr 14 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 3.0.0-1.6d56cfgit
 - build gajim extension
