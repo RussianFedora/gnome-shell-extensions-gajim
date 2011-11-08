@@ -1,6 +1,6 @@
 Name:           gnome-shell-extensions-gajim
-Version:        3.0.0
-Release:        2.6d56cfgit%{?dist}
+Version:        3.2.0
+Release:        1.9eb2a5git%{?dist}
 Summary:        GNOME Shell Extension for Gajim IM Client
 Group:          User Interface/Desktops
 License:        GPLv2+ 
@@ -8,7 +8,7 @@ URL:            http://live.gnome.org/GnomeShell/Extensions
 
 #  using git archive since upstream hasn't created tarballs.  Picking up a post 3.0.0 release snapshot for a couple of minor but relevant changes
 #  git archive --format=tar --prefix=gnome-shell-extensions/ git_commithash  | xz  > gnome-shell-extensions-<git_commithash_abbr>.tar.xz
-Source0:       gnome-shell-extensions-6d56cf.tar.xz  
+Source0:       gnome-shell-extensions-9eb2a5.tar.xz  
 
 # since we build from a git checkout
 BuildRequires:  gnome-common
@@ -52,6 +52,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale
 
 
 %changelog
+* Wed Nov 9 2011 Ivan Afonichev <ivan.afonichev@gmail.com> - 3.2.0-1.9eb2a5git
+- Update for gnome-shell 3.2
+
 * Thu Apr 14 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 3.0.0-2.6d56cfgit
 - require gnome-shell-extensions-common not gnome-shell-extensions-gajim-common
 
